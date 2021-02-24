@@ -1,0 +1,1205 @@
+@import url('https://fonts.googleapis.com/css?family=Quicksand:400,500,700');
+html,
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Quicksand", sans-serif;
+    font-size: 10px;
+/*    background-color: #0b0c0d !important;*/
+/*    background: url(https://imgur.com/5Ias5Kb) no-repeat 50% 50%;*/
+      background: url(https://triathlontrainingblog.files.wordpress.com/2013/04/dscn0321.jpg) no-repeat 50% 50%;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+
+}
+
+
+header {
+      width: 100%;
+      height: 100vh;
+}
+
+
+
+.content {
+      width: 100%;
+      font-size: 20px;
+      line-height: 30px;
+      text-align: justify;
+      background: rgba(0, 0, 0, 0.55);
+      color: #fff;
+}
+
+.logo {
+      line-height: 60px;
+      position: fixed;
+      float: left;
+      margin: 16px 46px;
+      color: #fff;
+      font-weight: bold;
+      font-size: 20px;
+      letter-spacing: 2px;
+}
+
+nav {
+      position: fixed;
+      width: 100%;
+      line-height: 60px;
+      z-index:1;
+      background-color: black;
+}
+
+nav ul {
+      line-height: 60px;
+      list-style: none;
+      background: rgba(0, 0, 0, 0);
+      overflow: hidden;
+      color: #fff;
+      padding: 0;
+      text-align: right;
+      margin: 0;
+      padding-right: 40px;
+      transition: 1s;
+}
+
+nav.black ul {
+      background: #000;
+}
+
+nav ul li {
+      display: inline-block;
+      padding: 16px 40px;;
+}
+
+nav ul li a {
+      text-decoration: none;
+      color: #fff;
+      font-size: 16px;
+}
+
+.menu-icon {
+      line-height: 60px;
+      width: 100%;
+      background: #000;
+      text-align: right;
+      box-sizing: border-box;
+      padding: 15px 24px;
+      cursor: pointer;
+      color: #fff;
+      display: none;
+}
+
+@media(max-width: 786px) {
+
+      .logo {
+            position: fixed;
+            top: 0;
+            margin-top: 16px;
+      }
+
+      nav ul {
+            max-height: 0px;
+            background: #000;
+      }
+
+      nav.black ul {
+            background: #000;
+      }
+
+      .showing {
+            max-height: 34em;
+      }
+
+      nav ul li {
+            box-sizing: border-box;
+            width: 100%;
+            padding: 24px;
+            text-align: center;
+      }
+
+      .menu-icon {
+            display: block;
+      }
+
+}
+
+.spacer{
+      height: 30%;
+}
+
+
+.row {
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+/*  padding: 0 4px;*/
+}
+
+/* Create five equal columns that sits next to each other */
+.column {
+  flex: 20%;
+  width: 20%;
+  padding: 0 15px;
+  display: inline-block;
+}
+
+.column img {
+  margin-top: 8px;
+  vertical-align: middle;
+  width: 100%;
+  opacity: 0.95;
+}
+
+.footerRow {
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  flex-wrap: wrap;
+/*  padding: 0 4px;*/
+}
+
+/* Create three equal columns that sits next to each other */
+.footerColumn {
+  flex: 33.3%;
+  width: 33.3%;
+  padding: 0 4px;
+  display: inline-block;
+}
+
+.PictureCaptions {
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 0px;
+  color: gray;
+}
+
+.PictureCaptionsPrice {
+  text-align: center;
+  margin-top: 8px;
+  margin-bottom: 10px;
+  color: gray;
+}
+
+.InfoIndent {
+  margin-left: 40px;
+}
+
+.secondaryImages {
+    display: inline-block;
+    width: 30%;
+    margin-top: 20px;
+    max-width: 30%;
+}
+
+
+
+
+/* class applies to select element itself, not a wrapper element */
+.select-css {
+    display: inline-block;
+    font-size: 14px;
+    font-family: sans-serif;
+    font-weight: 700;
+    color: white;
+    padding: .0em 1.4em .0em .8em;
+    width: 45%;
+    height: 32px;
+    max-width: 100%; /* useful when width is set to anything other than 100% */
+    box-sizing: border-box;
+    margin: 0;
+    border: 0.5px solid gray;
+    box-shadow: 0 1px 0 1px rgba(0,0,0,.04);
+    border-radius: .0em;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+    background-color: transparent;
+    /* note: bg image below uses 2 urls. The first is an svg data uri for the arrow icon, and the second is the gradient. 
+        for the icon, if you want to change the color, be sure to use `%23` instead of `#`, since it's a url. You can also swap in a different svg icon or an external image reference
+        
+    */
+    background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23007CB2%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E');
+    background-repeat: no-repeat, repeat;
+    /* arrow icon position (1em from the right, 50% vertical) , then gradient position*/
+    background-position: right .7em top 50%, 0 0;
+    /* icon size, then gradient */
+    background-size: .65em auto, 100%;
+}
+/* Hide arrow icon in IE browsers */
+.select-css::-ms-expand {
+    display: none;
+}
+/* Hover style */
+.select-css:hover {
+    border-color: #000000;
+}
+/* Focus style */
+/*.select-css:focus {*/
+/*    border-color: #aaa;*/
+    /* It'd be nice to use -webkit-focus-ring-color here but it doesn't work on box-shadow */
+/*    box-shadow: 0 0 1px 3px rgba(51, 51, 51, .7);
+    box-shadow: 0 0 0 3px -moz-mac-focusring;
+    color: #222; 
+    outline: none;*/
+}
+
+/* Set options to normal weight */
+.select-css option {
+    font-weight:normal;
+}
+
+/* Support for rtl text, explicit support for Arabic and Hebrew */
+*[dir="rtl"] .select-css, :root:lang(ar) .select-css, :root:lang(iw) .select-css {
+    background-position: left .7em top 50%, 0 0;
+    padding: .6em .8em .5em 1.4em;
+}
+
+/* Disabled styles */
+.select-css:disabled, .select-css[aria-disabled=true] {
+    color: graytext;
+    background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22graytext%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E'),
+      linear-gradient(to bottom, #ffffff 0%,#e5e5e5 100%);
+}
+
+.select-css:disabled:hover, .select-css[aria-disabled=true] {
+    border-color: #aaa;
+}
+
+
+/* class applies to select element itself, not a wrapper element */
+.button-css {
+    display: inline-block;
+    font-size: 14px;
+    font-family: sans-serif;
+    font-weight: 700;
+    color: #ffffff;
+    padding: .0em 1.4em .0em .8em; 
+    width: 45%;
+    height: 32px;
+    max-width: 100%; /* useful when width is set to anything other than 100% */
+    box-sizing: border-box;
+    margin: 0;
+    border: 0.5px solid gray;
+    box-shadow: 0 1px 0 1px rgba(0,0,0,.04);
+    border-radius: .0em;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+    background: none;
+    /* note: bg image below uses 2 urls. The first is an svg data uri for the arrow icon, and the second is the gradient. 
+        for the icon, if you want to change the color, be sure to use `%23` instead of `#`, since it's a url. You can also swap in a different svg icon or an external image reference */
+}
+
+
+
+/* CART */
+
+.columnCartEdge {
+  flex: 15%; /* changed from 20 */
+  width: 15%;
+  padding: 0 4px;
+  display: inline-block;
+}
+
+.cartColumn {
+  flex: 70%; /* changed from 20 */
+  width: 70%;
+  padding: 0 4px;
+  display: inline-block;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@import url('https://fonts.googleapis.com/css?family=Quicksand:400,500,700');
+html,
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Quicksand", sans-serif;
+/*    font-size: 62.5%;*/
+    font-size: 10px;
+    background-color: #00020f !important;
+/*    background-color: white !important;*/
+}
+/*-- Inspiration taken from abdo steif -->
+/* --> https://codepen.io/abdosteif/pen/bRoyMb?editors=1100*/
+
+
+input[type=search] {
+        border: 2px solid red;
+        border-radius: 4px;
+}
+
+
+
+.navbar
+  {
+    border-bottom:0.5px solid gray;
+    background-color: solid black;
+  }
+
+
+
+
+.mobileColumn {
+  flex: 85%;
+  width: 85%;
+  padding: 0 4px;
+  display: inline-block;
+}
+
+.mobileColumn img {
+  margin-top: 8px;
+  vertical-align: middle;
+  width: 100%;
+}
+
+.mobileColumnLeft {
+  margin-top: 2%;
+  margin-left: 2%;
+  margin-right: 1%;
+  width: 47%;
+  display: inline-block;
+}
+
+.mobileColumnRight {
+  margin-top: 2%;
+  margin-left: 1%;
+  margin-right: 2%;
+  width: 47%;
+  display: inline-block;
+}
+
+.mobileColumnLeft img {
+  margin-top: 8px;
+  vertical-align: middle;
+  width: 100%;
+}
+
+.mobileColumnRight img {
+  margin-top: 8px;
+  vertical-align: middle;
+  width: 100%;
+}
+
+.mobileRow {
+  width: 96%;
+  margin-left: 2%;
+  margin-right: 2%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.footerRow {
+  width: 96%;
+  margin-left: 2%;
+  margin-right: 2%;
+  display: flex;
+}
+
+
+
+.row {
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  flex-wrap: wrap;
+/*  padding: 0 4px;*/
+
+}
+
+.cartRow {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  display: flex;
+  flex-wrap: wrap;
+  height: 15%;
+  max-width: 100%;
+}
+
+.rowType2 {
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 4px;
+  height: 10%;
+}
+
+
+.column2 {
+  margin-top: 5px;
+  margin-bottom: 5px;
+  flex: 20%;
+  width: 20%;
+  padding: 0 4px;
+  display:inline-block;
+}
+
+.cartImage {
+  height: 70%;
+  display:inline-block;
+  float: left;
+}
+
+/* Create five equal columns that sits next to each other */
+.column {
+  flex: 20%;
+  width: 20%;
+  padding: 0 4px;
+  display: inline-block;
+}
+
+.columnCartEdge {
+  flex: 15%; /* changed from 20 */
+  width: 15%;
+  padding: 0 4px;
+  display: inline-block;
+}
+
+.cartColumn {
+  flex: 70%; /* changed from 20 */
+  width: 70%;
+  padding: 0 4px;
+  display: inline-block;
+}
+
+
+/* Checkout Columns - 15 30 10 30 15 */
+
+.checkoutColumn12 {
+  flex: 12.5%;
+  width: 12.5%;
+  padding: 0 4px;
+  display: inline-block;
+}
+
+.checkoutColumn35 {
+  flex: 37.5%;
+  width: 37.5%;
+  padding: 0 4px;
+  display: inline-block;
+}
+
+.checkoutColumn5 {
+  flex: 2.5%;
+  width: 2.5%;
+  padding: 0 4px;
+  display: inline-block;
+}
+
+.checkoutColumn25 {
+  flex: 25%;
+  width: 25%;
+  padding: 0 4px;
+  display: inline-block;
+}
+
+
+
+
+.column img {
+  margin-top: 8px;
+  vertical-align: middle;
+  width: 100%;
+}
+
+
+
+.PictureCaptions {
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 0px;
+  color: gray;
+}
+
+.PictureCaptionsPrice {
+  text-align: center;
+  margin-top: 8px;
+  margin-bottom: 10px;
+  color: gray;
+}
+
+.InfoIndent {
+  margin-left: 40px;
+}
+
+
+
+/* SIDE NAV */
+
+.sidenav {
+  height: 100%; /* Full-height: remove this if you want "auto" height */
+  width: 15%; /* Set the width of the sidebar */
+  position: fixed; /* Fixed Sidebar (stay in place on scroll) */
+  z-index: 1; /* Stay on top */
+  top: 0; /* Stay at the top */
+  left: 0;
+  background-color: #00020f; /* Black */
+  overflow-x: hidden; /* Disable horizontal scroll */
+  padding-top: 20px;
+  border-right: solid gray 0.5px;
+}
+
+/* The navigation menu links */
+.sidenav a {
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+}
+
+/* When you mouse over the navigation links, change their color */
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+/* Style page content */
+.main {
+  margin-left: 160px; /* Same as the width of the sidebar */
+  padding: 0px 10px;
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidebar (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+
+
+
+
+/* SIDE NAV RIGHT*/
+
+.sidenavRight {
+  height: 100%; /* Full-height: remove this if you want "auto" height */
+  width: 5%; /* Set the width of the sidebar */
+  position: fixed; /* Fixed Sidebar (stay in place on scroll) */
+  z-index: 1; /* Stay on top */
+  top: 0; /* Stay at the top */
+  right: 0;
+  background-color: #00020f; /* Black */
+/*  background-color: white;*/ /* Black */
+  overflow-x: hidden; /* Disable horizontal scroll */
+  padding-top: 20px;
+  border-left: solid gray 0.5px;
+}
+
+/* The navigation menu links */
+.sidenavRight a {
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+}
+
+/* When you mouse over the navigation links, change their color */
+.sidenavRight a:hover {
+  color: #f1f1f1;
+}
+
+/* Style page content */
+.mainRight {
+  margin-left: 160px; /* Same as the width of the sidebar */
+  padding: 0px 10px;
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidebar (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+  .sidenavRight {padding-top: 15px;}
+  .sidenavRight a {font-size: 18px;}
+}
+
+/*
+
+
+/*
+
+
+/* class applies to select element itself, not a wrapper element */
+.select-css {
+    display: inline-block;
+    font-size: 14px;
+    font-family: sans-serif;
+    font-weight: 700;
+    color: white;
+    padding: .0em 1.4em .0em .8em;
+    width: 45%;
+    height: 32px;
+    max-width: 100%; /* useful when width is set to anything other than 100% */
+    box-sizing: border-box;
+    margin: 0;
+    border: 0.5px solid gray;
+    box-shadow: 0 1px 0 1px rgba(0,0,0,.04);
+    border-radius: .0em;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+    background-color: #000000;
+    /* note: bg image below uses 2 urls. The first is an svg data uri for the arrow icon, and the second is the gradient. 
+        for the icon, if you want to change the color, be sure to use `%23` instead of `#`, since it's a url. You can also swap in a different svg icon or an external image reference
+        
+    */
+    background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23007CB2%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E');
+    background-repeat: no-repeat, repeat;
+    /* arrow icon position (1em from the right, 50% vertical) , then gradient position*/
+    background-position: right .7em top 50%, 0 0;
+    /* icon size, then gradient */
+    background-size: .65em auto, 100%;
+}
+/* Hide arrow icon in IE browsers */
+.select-css::-ms-expand {
+    display: none;
+}
+/* Hover style */
+.select-css:hover {
+    border-color: #000000;
+}
+/* Focus style */
+/*.select-css:focus {*/
+/*    border-color: #aaa;*/
+    /* It'd be nice to use -webkit-focus-ring-color here but it doesn't work on box-shadow */
+/*    box-shadow: 0 0 1px 3px rgba(51, 51, 51, .7);
+    box-shadow: 0 0 0 3px -moz-mac-focusring;
+    color: #222; 
+    outline: none;*/
+}
+
+/* Set options to normal weight */
+.select-css option {
+    font-weight:normal;
+}
+
+/* Support for rtl text, explicit support for Arabic and Hebrew */
+*[dir="rtl"] .select-css, :root:lang(ar) .select-css, :root:lang(iw) .select-css {
+    background-position: left .7em top 50%, 0 0;
+    padding: .6em .8em .5em 1.4em;
+}
+
+/* Disabled styles */
+.select-css:disabled, .select-css[aria-disabled=true] {
+    color: graytext;
+    background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22graytext%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E'),
+      linear-gradient(to bottom, #ffffff 0%,#e5e5e5 100%);
+}
+
+.select-css:disabled:hover, .select-css[aria-disabled=true] {
+    border-color: #aaa;
+}
+
+
+/* class applies to select element itself, not a wrapper element */
+.button-css {
+    display: inline-block;
+    font-size: 14px;
+    font-family: sans-serif;
+    font-weight: 700;
+    color: #ffffff;
+    padding: .0em 1.4em .0em .8em; 
+    width: 45%;
+    height: 32px;
+    max-width: 100%; /* useful when width is set to anything other than 100% */
+    box-sizing: border-box;
+    margin: 0;
+    border: 0.5px solid gray;
+    box-shadow: 0 1px 0 1px rgba(0,0,0,.04);
+    border-radius: .0em;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+    background-color: #000000;
+    /* note: bg image below uses 2 urls. The first is an svg data uri for the arrow icon, and the second is the gradient. 
+        for the icon, if you want to change the color, be sure to use `%23` instead of `#`, since it's a url. You can also swap in a different svg icon or an external image reference */
+}
+
+
+/* class applies to select element itself, not a wrapper element */
+.message-css {
+    display: inline-block;
+    font-size: 16px;
+    font-family: sans-serif;
+    font-weight: 700;
+    color: #ffffff;
+    padding: .0em 1.4em .0em .8em; 
+    width: 82%;
+    height: 32px;
+    max-width: 100%; /* useful when width is set to anything other than 100% */
+    box-sizing: border-box;
+    margin: 0;
+    border: 4px solid #000000;
+    box-shadow: 0 1px 0 1px rgba(0,0,0,.04);
+    border-radius: .0em;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+    background-color: #000000;
+    /* note: bg image below uses 2 urls. The first is an svg data uri for the arrow icon, and the second is the gradient. 
+        for the icon, if you want to change the color, be sure to use `%23` instead of `#`, since it's a url. You can also swap in a different svg icon or an external image reference */
+}
+
+
+/* class applies to select element itself, not a wrapper element */
+.button-css-cart {
+    display: inline-block;
+    font-size: 16px;
+    font-family: sans-serif;
+    font-weight: 700;
+    color: #ffffff;
+    padding: .0em 1.4em .0em .8em; 
+    width: 100px;
+    height: 32px;
+    max-width: 100%; /* useful when width is set to anything other than 100% */
+    box-sizing: border-box;
+    margin: 0;
+    border: 4px solid #000000;
+    box-shadow: 0 1px 0 1px rgba(0,0,0,.04);
+    border-radius: .0em;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+    background-color: #000000;
+    /* note: bg image below uses 2 urls. The first is an svg data uri for the arrow icon, and the second is the gradient. 
+        for the icon, if you want to change the color, be sure to use `%23` instead of `#`, since it's a url. You can also swap in a different svg icon or an external image reference */
+}
+
+.secondaryImages {
+    display: inline-block;
+    width: 30%;
+    margin-top: 20px;
+    max-width: 30%;
+}
+
+.fade-in {
+    display: inline-block;
+    font-size: 16px;
+    font-family: sans-serif;
+    font-weight: 700;
+    color: #ffffff;
+    padding: .0em 1.4em .0em .8em; 
+    width: 82%;
+    height: 32px;
+    max-width: 100%; /* useful when width is set to anything other than 100% */
+    box-sizing: border-box;
+    margin: 0;
+    border: 4px solid #000000;
+    box-shadow: 0 1px 0 1px rgba(0,0,0,.04);
+    border-radius: .0em;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+    background-color: #000000;
+  animation: fadeIn ease 3s;
+  -webkit-animation: fadeIn 2s linear forwards;
+  -moz-animation: fadeIn 2s linear forwards;
+  -o-animation: fadeIn 2s linear forwards;
+  -ms-animation: fadeIn 2s linear forwards;
+}
+@keyframes fadeIn {
+  0% {
+    opacity:0;
+    margin-top: -60;
+  } 
+  10% {
+    opacity:1;
+    margin-top: 10;
+  }
+  90% {
+    opacity:1;
+    margin-top: 10;
+  }
+  100% {
+    opacity:0;
+    margin-top: 80;
+  }
+}
+
+@-moz-keyframes fadeIn {
+  0% {
+    opacity:0;
+    margin-top: -60;
+  } 
+  10% {
+    opacity:1;
+    margin-top: 10;
+  }
+  90% {
+    opacity:1;
+    margin-top: 10;
+  }
+  100% {
+    opacity:0;
+    margin-top: 80;
+  }
+}
+
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity:0;
+    margin-top: -60;
+  } 
+  10% {
+    opacity:1;
+    margin-top: 10;
+  }
+  90% {
+    opacity:1;
+    margin-top: 10;
+  }
+  100% {
+    opacity:0;
+    margin-top: 80;
+  }
+}
+
+@-o-keyframes fadeIn {
+  0% {
+    opacity:0;
+    margin-top: -60;
+  } 
+  10% {
+    opacity:1;
+    margin-top: 10;
+  }
+  90% {
+    opacity:1;
+    margin-top: 10;
+  }
+  100% {
+    opacity:0;
+    margin-top: 80;
+  }
+}
+
+
+
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+  font-size: 62,5%;
+}
+
+
+
+
+
+.fade-in-mobile {
+    display: inline-block;
+    font-size: 16px;
+    font-family: sans-serif;
+    font-weight: 700;
+    color: blue;
+    padding: .0em 1.4em .0em .8em; 
+    width: 45%;
+    height: 32px;
+    max-width: 100%; /* useful when width is set to anything other than 100% */
+    box-sizing: border-box;
+    margin: 0;
+    border: 4px solid green;
+    box-shadow: 0 1px 0 1px rgba(0,0,0,.04);
+    border-radius: .0em;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+    background-color: #000000;
+  animation: fadeInMob ease 5s;
+  -webkit-animation: fadeInMob 2s linear forwards;
+  -moz-animation: fadeInMob 2s linear forwards;
+  -o-animation: fadeInMob 2s linear forwards;
+  -ms-animation: fadeInMob 2s linear forwards;
+}
+@keyframes fadeInMob {
+  0% {
+    opacity:0;
+    margin-left: -60;
+  } 
+  50% {
+    opacity:1;
+    margin-left: -25;
+  }
+  100% {
+    opacity:1;
+    margin-left: 10;
+  }
+}
+
+@-moz-keyframes fadeInMob {
+  0% {
+    opacity:0;
+    margin-left: -60;
+  } 
+  50% {
+    opacity:1;
+    margin-left: -25;
+  }
+  100% {
+    opacity:1;
+    margin-left: 10;
+  }
+}
+
+
+@-webkit-keyframes fadeInMob {
+  0% {
+    opacity:0;
+    margin-left: -60;
+  } 
+  50% {
+    opacity:1;
+    margin-left: -25;
+  }
+  100% {
+    opacity:1;
+    margin-left: 10;
+  }
+}
+
+
+@-o-keyframes fadeInMob {
+  0% {
+    opacity:0;
+    margin-left: -60;
+  } 
+  50% {
+    opacity:1;
+    margin-left: -25;
+  }
+  100% {
+    opacity:1;
+    margin-left: 10;
+  }
+}
+
+
+
+
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+  font-size: 62,5%;
+}
+
+
+.fade-in-mobile2 {
+    display: inline-block;
+    font-size: 16px;
+    font-family: sans-serif;
+    font-weight: 700;
+    color: #ffffff;
+    padding: .0em 1.4em .0em .8em; 
+    width: 45%;
+    height: 32px;
+    max-width: 100%; /* useful when width is set to anything other than 100% */
+    box-sizing: border-box;
+    margin: 0;
+    border: 4px solid #000000;
+    box-shadow: 0 1px 0 1px rgba(0,0,0,.04);
+    border-radius: .0em;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+    background-color: #000000;
+  animation: fadeInMobII ease 5s;
+  -webkit-animation: fadeInMobII 2s linear forwards;
+  -moz-animation: fadeInMobII 2s linear forwards;
+  -o-animation: fadeInMobII 2s linear forwards;
+  -ms-animation: fadeInMobII 2s linear forwards;
+}
+@keyframes fadeInMobII {
+  0% {
+    opacity:0;
+    margin-left: -30;
+  } 
+  50% {
+    opacity:1;
+    margin-left: 5;
+  }
+  100% {
+    opacity:1;
+    margin-left: 40;
+  }
+}
+
+@-moz-keyframes fadeInMobII {
+  0% {
+    opacity:0;
+    margin-left: -30;
+  } 
+  50% {
+    opacity:1;
+    margin-left: 5;
+  }
+  100% {
+    opacity:1;
+    margin-left: 40;
+  }
+}
+
+
+@-webkit-keyframes fadeInMobII {
+  0% {
+    opacity:0;
+    margin-left: -30;
+  } 
+  50% {
+    opacity:1;
+    margin-left: 5;
+  }
+  100% {
+    opacity:1;
+    margin-left: 40;
+  }
+}
+
+
+@-o-keyframes fadeInMobII {
+  0% {
+    opacity:0;
+    margin-left: -30;
+  } 
+  50% {
+    opacity:1;
+    margin-left: 5;
+  }
+  100% {
+    opacity:1;
+    margin-left: 40;
+  }
+}
+
+
+
+
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+  font-size: 62,5%;
+}
+
+
+
+
+
+
+
+
+.form__label {
+  font-family: 'Roboto', sans-serif;
+  color: #818181;
+  font-size: 1.2rem;
+  margin-left: 2rem;
+  margin-top: 0.7rem;
+  display: block;
+  transition: all 0.3s;
+  transform: translateY(0rem);
+}
+
+.form__input {
+  font-family: 'Roboto', sans-serif;
+  color: #333;
+  font-size: 1.2rem;
+  margin: 0 auto;
+  padding: 1.5rem 2rem;
+  border-radius: 0.2rem;
+  background-color: rgb(255, 255, 255);
+  border: none;
+  width: 90%;
+  display: block;
+  border-bottom: 0.3rem solid transparent;
+  transition: all 0.3s;
+}
+
+.form__input:placeholder-shown + .form__label {
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transform: translateY(-4rem);
+  transform: translateY(-4rem);
+}
+
+
+.vertical-center {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+
+.outer {
+  width: 100%;  
+  transform: scale(1.0);
+  transform-origin: 0 0;
+/*  margin-top: 15%;*/
+}
+
+.outerOuter {
+  width: 80%; 
+  margin-left: 15%;
+}
+
+.line{
+/*width: 100%;*/
+height: 2px;
+border-top: 0.5px solid gray;
+position: absolute;
+}
