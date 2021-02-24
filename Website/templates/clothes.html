@@ -1,0 +1,175 @@
+<DOCTYPE html>
+  <html lang="en">
+  <head>
+
+    <script src="/static/scripts.js"></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/static/styles.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <!--         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> -->
+    <link href='https://fonts.googleapis.com/css?family=Palanquin Dark' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Palanquin' rel='stylesheet'>
+
+  </head>
+
+  
+<div class="wrapper">
+      <nav>
+       <div class="menu-icon">
+        <i class="fa fa-bars fa-2x"></i>
+      </div>
+      <div class="logo">
+        <a class="navbar-brand" href="/home">
+          <img src="/static/logo2.gif" alt="" style="width:50px; height:40px;">
+        </a>
+      </div>
+      <div class="menu">
+        <ul>
+          <li><a href="/home">Clothes</a></li>
+          <li><a href="/gallery">Gallery</a></li>
+          <li><a href="/about">About</a></li>
+          <li><a href="/cart">Basket</a></li>
+        </ul>
+      </div>
+    </nav>
+</div>
+
+
+<div class="spacer">
+</div>
+
+
+<body>
+
+<div class="content">
+
+
+
+
+  <div class="footerRow">
+
+    <!-- column far left -->
+
+    <div class="column">
+    </div>
+
+    <!-- column left with images -->
+
+    <div class="column">
+
+      <img src={{img1Var}} id="image1" class="primaryImage"/>
+
+      <div style="height: 15px"> </div>
+
+      <div>
+
+        <img class="secondaryImages" style="float: left; cursor:pointer" src={{img1Var}} onclick="toggleImage2(1, '{{img1Var}}');"/>
+        <img class="secondaryImages" style="margin-left: 5%; margin-right: 5%; cursor:pointer" src={{img2Var}} onclick="toggleImage2(1, '{{img2Var}}');"/>
+        <img class="secondaryImages" style="float: right; cursor:pointer" src={{img3Var}} onclick="toggleImage2(1, '{{img3Var}}');"/>
+
+      </div>
+
+    </div>
+
+    <!-- column right with info -->
+
+    <div class="column">
+
+      <div class="InfoIndent">
+
+        <b style="font-size: 50px; margin-left: 5%; color: #818181;">{{nameVar}}</b>
+        <br><b style="font-size: 20px; margin-left: 5%; color: #818181;">£{{priceVar}}.00</b></br>
+        <p style="margin-bottom: 50px; margin-top: 50px; color: #818181;">{{descVar}}</p>
+
+        <select class="select-css" id="selectID" onchange="show_Selected()" style="margin-left: 2%;">
+          <label for="select-css">--Size--</label>
+          <option style="color: black" selected="selected">--Size--</option>
+          <option style="color: black">Small</option>
+          <option style="color: black">Medium</option>
+          <option style="color: black">Large</option>
+        </select>
+
+        <script>
+          window.onload = function() {
+            var selItem = sessionStorage.getItem("SelItem");  
+            $('#selectID').val(selItem);
+          }
+          $('#selectID').change(function() { 
+            var selVal = $(this).val();
+            sessionStorage.setItem("SelItem", selVal);
+          });
+        </script>
+
+
+        <button class="button-css" value="{{idVar}}" onclick="show_selected(value)" style="margin-left: 2%;">Add to Cart</button>
+
+
+
+        {% with messages = get_flashed_messages() %}
+        {% if messages %}
+        {% for message in messages %}
+        <p id="addMessage" class="fade-in" style="margin-left: 5%; margin-top: 10px">{{ message }}</p>
+        {% endfor %}
+        {% endif %}
+        {% endwith %}
+
+
+
+      </div>
+    </div>
+
+    <!-- column far right -->
+
+    <div class="column">
+    </div>
+  </div>
+
+
+
+    <div class="spacer">
+
+    </div>
+
+
+    <!-- Create the footer -->
+
+    <div class="footerRow">
+
+      <div class="footerColumn"> <p style="text-align: center; color: gray; font-size: 1.75em;"> Ross Langan - 2020 </p> </div>
+      <div class="footerColumn"> <p style="text-align: center; color: gray; font-size: 1.75em;"> Ross Langan - 2020 </p> </div>
+      <div class="footerColumn"> <p style="text-align: center; color: gray; font-size: 1.75em;"> Ross Langan - 2020 </p> </div>
+
+    </div>
+
+
+
+
+
+</div>
+</div>
+
+
+</div>
+</header>
+</div>
+
+
+  </div>
+</div>
+
+
+
+</body>
+
+
+
+
+
+
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
+<script src='https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js'></script>
+<script  src="function.js"></script>
+
+</html>
