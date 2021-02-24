@@ -1,0 +1,160 @@
+<DOCTYPE html>
+  <html lang="en">
+  <head>
+
+    <script src="/static/scripts.js"></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/static/styles.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <!--         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> -->
+    <link href='https://fonts.googleapis.com/css?family=Palanquin Dark' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Palanquin' rel='stylesheet'>
+
+  </head>
+
+
+<div class="wrapper">
+      <nav>
+       <div class="menu-icon">
+        <i class="fa fa-bars fa-2x"></i>
+      </div>
+      <div class="logo">
+        <a class="navbar-brand" href="/home">
+          <img src="/static/logo2.gif" alt="" style="width:50px; height:40px;">
+        </a>
+      </div>
+      <div class="menu">
+        <ul>
+          <li><a href="/home">Clothes</a></li>
+          <li><a href="/gallery">Gallery</a></li>
+          <li><a href="/about">About</a></li>
+          <li><a href="/cart">Basket</a></li>
+        </ul>
+      </div>
+    </nav>
+</div>
+
+
+
+
+  <header>
+  </header>
+
+
+<body>
+
+
+
+  <div class="content">
+
+
+    <!-- Create some space above the images - perfect space for another long image banner or something -->
+
+    <div class="spacer">
+
+    </div>
+
+    <div class="footerRow">
+
+      <div class="column"> </div>
+      
+      <div class="column">
+        {% for piece in pieces %}
+        {% if piece.id % 3 == 1 %}
+        <a href='{{piece.ext}}'>
+          <img src={{piece.image}} id=""/>
+        </a>
+        <p class="PictureCaptions">{{piece.name}}</p>
+        <p class="PictureCaptionsPrice">£{{piece.price}}.00</p>
+        {% endif %}
+        {% endfor %}
+      </div>
+
+      <div class="column">
+        {% for piece in pieces %}
+        {% if piece.id % 3 == 2 %}
+        <a href='{{piece.ext}}'>
+          <img src={{piece.image}} id=""/>
+        </a>
+        <p class="PictureCaptions">{{piece.name}}</p>
+        <p class="PictureCaptionsPrice">£{{piece.price}}.00</p>
+        {% endif %}
+        {% endfor %}
+      </div>
+
+      <div class="column">
+        {% for piece in pieces %}
+        {% if piece.id % 3 == 0 %}
+        <a href='{{piece.ext}}'>
+          <img src={{piece.image}} id=""/>
+        </a>
+        <p class="PictureCaptions">{{piece.name}}</p>
+        <p class="PictureCaptionsPrice">£{{piece.price}}.00</p>
+        {% endif %}
+        {% endfor %}
+      </div>
+
+      <div class="column"> </div>
+
+    </div>
+
+
+    <div class="spacer">
+
+    </div>
+
+
+    <!-- Create the footer -->
+
+    <div class="footerRow">
+
+      <div class="footerColumn"> <p style="text-align: center; color: gray; font-size: 1.75em;"> Ross Langan - 2020 </p> </div>
+      <div class="footerColumn"> <p style="text-align: center; color: gray; font-size: 1.75em;"> Ross Langan - 2020 </p> </div>
+      <div class="footerColumn"> <p style="text-align: center; color: gray; font-size: 1.75em;"> Ross Langan - 2020 </p> </div>
+
+    </div>
+  </div>
+</div>
+
+
+
+</body>
+
+<!-- 
+<script>
+
+ $(document).ready(function() {
+  $(".menu-icon").on("click", function() {
+    $("nav ul").toggleClass("showing");
+  });
+});
+
+      // Scrolling Effect
+
+      $(window).on("scroll", function() {
+        if($(window).scrollTop()) {
+          $('nav').addClass('black');
+        }
+
+        else {
+          $('nav').removeClass('black');
+        }
+      })
+      
+    </script>
+ -->
+
+
+
+
+
+
+
+
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
+    <script src='https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js'></script>
+    <script  src="function.js"></script>
+
+    </html>
